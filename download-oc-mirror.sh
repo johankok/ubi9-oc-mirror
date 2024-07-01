@@ -16,4 +16,4 @@ sha256sum --check --ignore-missing sha256sum.txt
 tar zxf oc-mirror.tar.gz && chmod +x oc-mirror && mv oc-mirror /usr/local/bin/
 
 # Extract oc client
-tar zxf openshift-client-linux-$VERSION.tar.gz && mv kubectl oc /usr/local/bin/
+tar zxf openshift-client-linux-$VERSION.tar.gz && mv oc /usr/local/bin/
