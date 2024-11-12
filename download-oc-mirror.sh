@@ -13,7 +13,7 @@ done
 sha256sum --check --ignore-missing sha256sum.txt
 
 # Extract oc-mirror
-tar zxf oc-mirror.tar.gz && chmod +x oc-mirror && mv oc-mirror /usr/local/bin/
+tar zxf oc-mirror.tar.gz && chmod +rx oc-mirror && chown root:root oc-mirror && mv oc-mirror /usr/local/bin/
 
 # Extract oc client
 tar zxf openshift-client-linux-$VERSION.tar.gz && mv oc /usr/local/bin/
