@@ -4,8 +4,6 @@
 VERSION="4.17.4"
 BASE="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/$VERSION"
 
-env
-
 for file in oc-mirror.tar.gz openshift-client-linux-$VERSION.tar.gz sha256sum.txt
 do
   curl -OL $BASE/$file
