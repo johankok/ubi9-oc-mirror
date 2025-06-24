@@ -1,0 +1,22 @@
+name: Cleanup GitHub packages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"  # every day at midnight
+
+permissions:
+  packages: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    name: Delete old images from GHCR
+    steps:
+      - uses: snok/container-retention-policy@v3.0.0
+        with:
+          account: ${{ github.repository_owner }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          image-names: "ubi9-oc-mirror"
+          cut-off: 3m
+          keep-n-most-recent: 5
