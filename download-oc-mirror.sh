@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Download oc client and oc-mirror
-VERSION="4.18.9"
+VERSION="4.19.0"
 BASE="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/$VERSION"
 
 for file in oc-mirror.tar.gz openshift-client-linux-$VERSION.tar.gz sha256sum.txt
