@@ -1,11 +1,11 @@
-FROM registry.access.redhat.com/ubi9-minimal:9.6-1752587672 AS build
+FROM registry.access.redhat.com/ubi9-minimal:9.6-1754000177 AS build
 
 RUN microdnf install -y gzip tar && microdnf clean all
 
 ADD download-oc-mirror.sh .
 RUN ./download-oc-mirror.sh
 
-FROM registry.access.redhat.com/ubi9-minimal:9.6-1752587672
+FROM registry.access.redhat.com/ubi9-minimal:9.6-1754000177
 
 LABEL org.opencontainers.image.source="https://github.com/johankok/ubi9-oc-mirror" \
       org.opencontainers.image.description="Let's run oc mirror in a container"
