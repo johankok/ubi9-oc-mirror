@@ -4,7 +4,9 @@
     "config:recommended"
   ],
   "dockerfile": {
-    "fileMatch": ["Containerfile"]
+    "managerFilePatterns": [
+      "/Containerfile/"
+    ]
   },
   "labels": [
     "dependencies"
