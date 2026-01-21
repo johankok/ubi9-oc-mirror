@@ -1,8 +1,17 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base", ":disableDependencyDashboard"
+    "config:recommended"
   ],
   "dockerfile": {
     "fileMatch": ["Containerfile"]
-  }
+  },
+  "labels": [
+    "dependencies"
+  ],
+  "configMigration": true,
+  "timezone": "Europe/Amsterdam",
+  "schedule": [
+    "after 8am on friday"
+  ]
 }
