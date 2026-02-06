@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:best-practices"
   ],
   "dockerfile": {
     "managerFilePatterns": [
@@ -11,7 +11,6 @@
   "labels": [
     "dependencies"
   ],
-  "configMigration": true,
   "timezone": "Europe/Amsterdam",
   "schedule": [
     "after 8am on friday"
