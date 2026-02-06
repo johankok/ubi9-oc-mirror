@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Download oc client and oc-mirror
-VERSION="4.19.6"
+VERSION="stable-4.20"
 BASE="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/$VERSION"
 
-for file in oc-mirror.tar.gz openshift-client-linux-$VERSION.tar.gz sha256sum.txt
+for file in oc-mirror.tar.gz openshift-client-linux.tar.gz sha256sum.txt
 do
   curl -OL $BASE/$file
 done
@@ -16,4 +16,4 @@ sha256sum --check --ignore-missing sha256sum.txt
 tar zxf oc-mirror.tar.gz && chmod +rx oc-mirror && chown root:root oc-mirror && mv oc-mirror /usr/local/bin/
 
 # Extract oc client
-tar zxf openshift-client-linux-$VERSION.tar.gz && mv oc /usr/local/bin/
+tar zxf openshift-client-linux.tar.gz && mv oc /usr/local/bin/

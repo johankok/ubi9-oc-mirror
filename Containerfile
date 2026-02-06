@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi9-minimal:9.7-1770267347 AS build
 
 RUN microdnf install -y gzip tar && microdnf clean all
 
-ADD download-oc-mirror.sh .
+ADD bin/download-oc-mirror.sh .
 RUN ./download-oc-mirror.sh
 
 FROM registry.access.redhat.com/ubi9-minimal:9.7-1770267347
