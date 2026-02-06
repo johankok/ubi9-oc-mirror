@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: snok/container-retention-policy@v3.0.1
         with:
-          account: ${{ github.repository_owner }}
+          account: user
           token: ${{ secrets.GITHUB_TOKEN }}
           image-names: "ubi9-oc-mirror"
-          cut-off: 3m
+          cut-off: 1m
           keep-n-most-recent: 5
